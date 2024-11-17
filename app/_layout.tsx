@@ -118,7 +118,7 @@ const drawerScreensStyle = {
 // Para a definição de cores específicas nas navegações será
 // necessário buscar o parâmetro nos componentes de navegação e rota
 
-export default function RootLayout() {
+export default function App() {
   return (
     <SQLiteProvider
       databaseName="database.db"
