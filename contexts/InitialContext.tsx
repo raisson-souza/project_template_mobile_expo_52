@@ -19,7 +19,7 @@ export default function InitialContextComponent({ children }: InitialContextProp
     if (loading) {
         return (
             <Screen>
-                { Loading() }
+                <Loading />
             </Screen>
         )
     }

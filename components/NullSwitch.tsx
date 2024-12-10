@@ -1,5 +1,5 @@
 import { View, Text, Switch } from "react-native"
-import CustomButton from "./CustomButton"
+import CustomButton from "./customs/CustomButton"
 
 type SwitchNullProps = {
     /** Nome do switch */
