@@ -1,8 +1,8 @@
 import { Text, StyleSheet } from "react-native"
 import { useState } from "react"
-import Box from "./base/Box"
-import CustomButton from "./customs/CustomButton"
-import CustomModal from "./customs/CustomModal"
+import Box from "../base/Box"
+import CustomButton from "../customs/CustomButton"
+import CustomModal from "../customs/CustomModal"
 
 type FutureDevelopmentButtonProps = {
     btnTitle: string

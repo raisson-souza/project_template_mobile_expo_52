@@ -1,5 +1,4 @@
 import { AuthContextProvider } from "../../contexts/AuthContext"
-import { Login } from "../../screens/Login"
 import { ParamListBase, useFocusEffect, useNavigation } from "@react-navigation/native"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { useEffect } from "react"

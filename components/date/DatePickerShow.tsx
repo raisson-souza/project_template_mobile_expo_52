@@ -1,32 +1,32 @@
-import { DateFormatter } from "../utils/DateFormatter"
+import { DateFormatter } from "../../utils/DateFormatter"
 import { DateTimePickerAndroid } from "@react-native-community/datetimepicker"
 import { StyleProp, Text, TextStyle, StyleSheet } from "react-native"
-import Box from "./base/Box"
+import Box from "../base/Box"
 import IconIonicons from "react-native-vector-icons/Ionicons"
 
-type TimePickerShowProps = {
-    time: Date
+type DatePickerShowProps = {
+    date: Date
     onChange: (e : Date) => void
     textStyle?: StyleProp<TextStyle>
     iconSize?: number
     iconColor?: string
 }
 
-export default function TimePickerShow({ time, onChange, textStyle, iconSize = 20, iconColor = "black" }: TimePickerShowProps) {
-    const openTimePicker = () => {
+export default function DatePickerShow({ date, onChange, textStyle, iconSize = 20, iconColor = "black" }: DatePickerShowProps) {
+    const openDatePicker = () => {
         DateTimePickerAndroid.open({
-            value: time,
-            onChange: (event, date) => {
+            value: date,
+            onChange: (event, newDate) => {
                 if (event.type === "set") {
-                    if (date) {
-                        if (date.getTime() === time.getTime()) return
-                        onChange(DateFormatter.fixUTC(date.getTime()))
+                    if (newDate) {
+                        if (newDate.getTime() === date.getTime()) return
+                        onChange(newDate)
                     }
                 }
             },
-            mode: "time",
+            mode: "date",
             is24Hour: true,
-            timeZoneName: "America/Sao_Paulo",
+            timeZoneName: "America/Sao_Paulo"
         })
     }
 
@@ -34,15 +34,15 @@ export default function TimePickerShow({ time, onChange, textStyle, iconSize = 2
         <Box.Row style={ styles.container }>
             <Text
                 style={ textStyle }
-                onPress={ () => openTimePicker() }
+                onPress={ () => openDatePicker() }
             >
-                { DateFormatter.removeDate(time.toISOString()) }
+                { DateFormatter.removeTime(date.toISOString()) }
             </Text>
             <IconIonicons
-                name="time-outline"
+                name="calendar-outline"
                 size={ iconSize }
                 color={ iconColor }
-                onPress={ () => openTimePicker() }
+                onPress={ () => openDatePicker() }
             />
         </Box.Row>
     )
