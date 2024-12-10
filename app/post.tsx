@@ -1,5 +1,5 @@
+import { Link, useLocalSearchParams } from "expo-router"
 import { Screen } from "@/components/base/Screen"
-import { useLocalSearchParams } from "expo-router"
 import AuthRoute from "@/components/auth/Auth"
 import Box from "@/components/base/Box"
 import TextBold from "@/components/base/TextBold"
@@ -13,6 +13,7 @@ export default function PostScreen() {
                 <Box.Column>
                     <TextBold>TELA DO POST</TextBold>
                     <TextBold>POST { id }</TextBold>
+                    <Link href={{ pathname: "/" }}>Home</Link>
                 </Box.Column>
             </Screen>
         </AuthRoute>

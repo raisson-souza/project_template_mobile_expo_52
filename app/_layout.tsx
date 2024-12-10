@@ -25,12 +25,40 @@ export default function RootLayout() {
         <AuthContextComponent>
           <SyncContextComponent>
             <Stack
-              initialRouteName='(tabs)'
+              initialRouteName='index'
               screenOptions={ StackScreensStyle }
             >
-              <Stack.Screen name='(tabs)' options={{ title: "Tabs", headerShown: false }} />
-              <Stack.Screen name='post' options={{ title: "Post" }} />
-              <Stack.Screen name='credits' options={{ title: "Créditos" }} />
+              <Stack.Screen
+                name='index'
+                options={{
+                  title: "Home",
+                  headerBackVisible: false,
+                }}
+              />
+              <Stack.Screen
+                name='post'
+                options={{
+                  title: "Post",
+                }}
+              />
+              <Stack.Screen
+                name='credits'
+                options={{
+                  title: "Créditos",
+                }}
+              />
+              <Stack.Screen
+                name='user'
+                options={{
+                  title: "Usuário",
+                }}
+              />
+              <Stack.Screen
+                name='posts'
+                options={{
+                  title: "Posts",
+                }}
+              />
             </Stack>
           </SyncContextComponent>
         </AuthContextComponent>

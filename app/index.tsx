@@ -9,6 +9,8 @@ export default function IndexScreen() {
             <Box.Column>
                 <TextBold>TELA HOME</TextBold>
                 <Link href={{ pathname: "/credits" }}>Tela de Créditos</Link>
+                <Link href={{ pathname: "/posts" }}>Tela de Posts</Link>
+                <Link href={{ pathname: "/user" }}>Tela de Usuário</Link>
             </Box.Column>
         </Screen>
     )

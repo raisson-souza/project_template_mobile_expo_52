@@ -13,6 +13,7 @@ export default function PostsScreen() {
                     <Link href={{ pathname: "/post", params: { id: "1" }}}>Post 01</Link>
                     <Link href={{ pathname: "/post", params: { id: "2" }}}>Post 02</Link>
                     <Link href={{ pathname: "/post", params: { id: "3" }}}>Post 03</Link>
+                    <Link href={{ pathname: "/" }}>Home</Link>
                 </Box.Column>
             </Screen>
         </AuthRoute>
