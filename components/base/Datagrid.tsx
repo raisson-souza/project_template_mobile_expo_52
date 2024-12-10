@@ -1,8 +1,8 @@
 import { PaginationConfig } from "@/types/pagination"
 import { Picker } from "@react-native-picker/picker"
 import { StyleSheet, Text } from "react-native"
-import Box from "./base/Box"
-import CustomInput from "./customs/CustomInput"
+import Box from "./Box"
+import CustomInput from "../customs/CustomInput"
 
 type DatagridProps = {
     rows: JSX.Element[]
