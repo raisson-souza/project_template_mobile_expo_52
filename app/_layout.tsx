@@ -1,5 +1,5 @@
-import { Drawer } from 'expo-router/drawer'
 import { SQLiteProvider } from "expo-sqlite"
+import { Stack } from "expo-router"
 import { StatusBar } from 'expo-status-bar'
 import AuthContextComponent from "@/contexts/AuthContext"
 import InitialContextComponent from "@/contexts/InitialContext"
@@ -7,17 +7,11 @@ import React from "react"
 import SqliteDbManager from "@/db/database"
 import SyncContextComponent from "@/contexts/SyncContext"
 
-const DrawerScreensStyle = {
-  /** Cor do ícone do drawer e título */
-  headerTintColor: "white",
-  /** Cor do título da aba selecionada na section do drawer */
-  drawerActiveTintColor: "white",
-  /** Cor dos títulos das abas não selecionadas na section do drawer */
-  drawerInactiveTintColor: "grey",
+const StackScreensStyle = {
   /** Cor do header */
   headerStyle: { backgroundColor: "darkblue" },
-  /** Cor de fundo do drawer aberto */
-  drawerStyle: { backgroundColor: "darkblue" },
+  /** Cor do título do header */
+  headerTintColor: "white",
 }
 
 export default function RootLayout() {
@@ -30,13 +24,14 @@ export default function RootLayout() {
         <StatusBar />
         <AuthContextComponent>
           <SyncContextComponent>
-            <Drawer
-              initialRouteName='(stack)'
-              screenOptions={ DrawerScreensStyle }
+            <Stack
+              initialRouteName='(tabs)'
+              screenOptions={ StackScreensStyle }
             >
-              <Drawer.Screen name='(stack)' options={{ title: "Home" }}/>
-              <Drawer.Screen name='credits' options={{ title: "Créditos" }}/>
-            </Drawer>
+              <Stack.Screen name='(tabs)' options={{ title: "Tabs", headerShown: false }} />
+              <Stack.Screen name='post' options={{ title: "Post" }} />
+              <Stack.Screen name='credits' options={{ title: "Créditos" }} />
+            </Stack>
           </SyncContextComponent>
         </AuthContextComponent>
       </InitialContextComponent>

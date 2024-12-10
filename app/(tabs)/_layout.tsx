@@ -29,8 +29,7 @@ export default function RootLayout() {
             <Tabs.Screen
                 name='user'
                 options={{
-                    headerShown: false,
-                    tabBarLabel: "Usuário",
+                    title: "Usuário",
                     tabBarIcon: ({ color, size }) => (<IconAntDesign name="user" color={ color } size={ size } />),
                 }}
             />
@@ -45,8 +44,7 @@ export default function RootLayout() {
             <Tabs.Screen
                 name='posts'
                 options={{
-                    headerShown: false,
-                    tabBarLabel: "Posts",
+                    title: "Posts",
                     tabBarIcon: ({ color, size }) => (<IconFontAwesome6 name="newspaper" color={ color } size={ size } />),
                 }}
             />
