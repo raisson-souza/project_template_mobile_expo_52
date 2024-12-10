@@ -1,11 +1,13 @@
-import { Link } from "expo-router"
-import { Text, View } from "react-native"
+import { Screen } from "@/components/base/Screen"
+import Box from "@/components/base/Box"
+import TextBold from "@/components/base/TextBold"
 
-export default function Index() {
+export default function UserScreen() {
     return (
-        <View style={{ gap: 15 }}>
-            <Text>TELA DE USUÁRIO</Text>
-            <Link href="/tabs">home</Link>
-        </View>
+        <Screen>
+            <Box.Column>
+                <TextBold>TELA DO USUÁRIO</TextBold>
+            </Box.Column>
+        </Screen>
     )
 }
