@@ -1,9 +1,6 @@
 import { createContext, useContext, useEffect, useRef } from "react"
 import InternetInfo from "../utils/InternetInfo"
 
-// TODO: Exclua esse arquivo e SyncContextComponent em App.tsx caso seu projeto
-// não possua sincronização de dados
-
 type SyncContextProps = {
     children: JSX.Element | JSX.Element[]
 }
@@ -69,10 +66,8 @@ export default function SyncContextComponent({ children }: SyncContextProps) {
 
     /** realiza a sincronização de dados locais com a nuvem */
     const syncLocalData = async (): Promise<void> => {
-        console.log("Atualizando os dados locais...")
         try {
-            // ...
-            console.log("Dados locais atualizados.")
+            // TODO: Atualização dos dados locais
         } catch (ex) {
             console.error("Houve um erro ao atualizar os dados locais:", (ex as Error).message)
         }
@@ -80,10 +75,8 @@ export default function SyncContextComponent({ children }: SyncContextProps) {
 
     /** realiza a sincronização de dados em nuvem com dados locais */
     const syncCloudData = async (): Promise<void> => {
-        console.log("Atualizando os dados em nuvem...")
         try {
-            // ...
-            console.log("Dados em nuvem atualizados.")
+            // TODO: Atualização dos dados em nuvem
         } catch (ex) {
             console.error("Houve um erro ao atualizar os dados em nuvem:", (ex as Error).message)
         }

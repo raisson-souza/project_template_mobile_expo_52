@@ -3,7 +3,6 @@ import isNil from './IsNill'
 
 /**
  * Tipo de credenciais aceitas na autenticação
- * // TODO: alterar se necessário
 */
 export type LocalStorageCredentials = {
     email: string

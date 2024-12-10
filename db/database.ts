@@ -42,13 +42,12 @@ export default async function SqliteDbManager(db: SQLiteDatabase): Promise<void>
 
         // Nova versão do banco do usuário é aplicada
         await db.execAsync(`PRAGMA user_version = ${ newUserVersion }`)
-        console.log(`BANCO DE DADOS ATUALIZADO v${ newUserVersion }`)
     } catch (ex) {
         console.log(`Ocorreu um erro ao atualizar o banco de dados: ${ (ex as Error).message }`)
     }
     finally {
         console.log()
-        console.warn("\tPROJETO MODELO PARA MOBILE\n\tValide as mudanças necessárias conforme a necessidade de seu projeto!\n\tPesquise por: TODO")
+        console.warn("\tPROJETO MODELO PARA MOBILE\n\tValidar necessidades de modificação conforme TODOS.")
         console.log()
     }
 }
