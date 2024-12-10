@@ -3,6 +3,7 @@ import { StyleProp, View, ViewStyle } from "react-native"
 type CustomBoxProps<T> = {
     children: JSX.Element | JSX.Element[]
     style?: StyleProp<T>
+    onPress?: () => void
 }
 
 type BoxProps = {
@@ -12,32 +13,41 @@ type BoxProps = {
 }
 
 const Box: BoxProps = { 
-    Column: ({ children, style }) => {
-        return <View style={{
-            display: "flex",
-            flexDirection: "column",
-            ...style as any,
-        }}>
+    Column: ({ children, style, onPress }) => {
+        return <View
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                ...style as any,
+            }}
+            onTouchStart={ () => { onPress ? onPress() : null }}
+        >
             { children }
         </View>
     },
-    Center: ({ children, style }) => {
-        return <View style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            ...style as any,
-        }}>
+    Center: ({ children, style, onPress }) => {
+        return <View
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                ...style as any,
+            }}
+            onTouchStart={ () => { onPress ? onPress() : null }}
+        >
             { children }
         </View>
     },
-    Row: ({ children, style }) => {
-        return <View style={{
-            display: "flex",
-            flexDirection: "row",
-            ...style as any,
-        }}>
+    Row: ({ children, style, onPress }) => {
+        return <View
+            style={{
+                display: "flex",
+                flexDirection: "row",
+                ...style as any,
+            }}
+            onTouchStart={ () => { onPress ? onPress() : null }}
+        >
             { children }
         </View>
     },
