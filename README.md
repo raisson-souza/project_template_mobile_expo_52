@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+# Projeto Template para Mobile
+## EXPO SDK 52
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Clone o projeto e modifique as implementações já existentes conforme necessidade de sua aplicação.
+Procure por "TODO" no projeto.
 
-## Get started
+## Funcionalidades
 
-1. Install dependencies
+- Contexto para ações iniciais (InitialContext);
+- Contexto para autenticação (AuthContext);
+- Contexto para sincronização (SyncContext);
+- Base de dados local (SQLite);
+- Classe gerenciadora de requisições com fetch (Endpoints);
+- Buscador de variáveis de ambiente (Env);
+- Componentes:
+  - Autenticação de rota (AuthRoute);
+  - Botão ativador de biometria ou senha do dispositivo;
+  - Tela padrão (Screen);
+  - Datagrid;
+  - Loading padrão;
+  - Modal;
+  - Texto em negrito;
+  - Câmera;
+  - Botão;
+  - Imagem local e externa;
+  - Input;
+  - Switch;
+  - Switch nulo;
+  - Picker;
+  - Picker de data;
+  - Picker de hora;
+- Rotas de exemplo pré implementadas;
+  - Rotas com navegação por drawer, tabs e stack: **branch drawer**;
+  - Rotas com navegação por tabs e stack: **branch tabs**;
+  - Rotas com navegação por stack: **branch stack**;
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Desenvolvido por Raisson Souza
