@@ -31,10 +31,12 @@ export default function RootLayout() {
         <AuthContextComponent>
           <SyncContextComponent>
             <Drawer
-              initialRouteName='(stack)'
+              initialRouteName='index'
               screenOptions={ DrawerScreensStyle }
             >
-              <Drawer.Screen name='(stack)' options={{ title: "Home" }}/>
+              <Drawer.Screen name='index' options={{ title: "Home" }}/>
+              <Drawer.Screen name='user' options={{ title: "Usuário" }}/>
+              <Drawer.Screen name='(posts)' options={{ title: "Posts" }}/>
               <Drawer.Screen name='credits' options={{ title: "Créditos" }}/>
             </Drawer>
           </SyncContextComponent>
