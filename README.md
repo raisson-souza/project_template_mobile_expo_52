@@ -35,3 +35,5 @@ Procure por "TODO" no projeto.
   - Rotas com navegação por stack: **branch stack**;
 
 ### Desenvolvido por Raisson Souza
+
+*OBS: Expo já está no SDK 53!*
